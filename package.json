@@ -1,0 +1,27 @@
+{
+  "name": "leaflet-rd",
+  "version": "0.1.0",
+  "description": "Adds support for the Amersfoort / RD New coordinate system",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"open specSpec/Runner.html to perform tests\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geoloep/Leaflet.RD.git"
+  },
+  "author": "geoloep",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/geoloep/Leaflet.RD/issues"
+  },
+  "homepage": "https://github.com/geoloep/Leaflet.RD#readme",
+  "keywords": [
+    "leaflet",
+    "coordinate",
+    "amersfoort",
+    "RD New",
+    "Rijksdriehoeksmeting",
+    "EPSG:28992"
+  ]
+}
