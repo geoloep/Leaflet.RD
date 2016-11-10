@@ -37,7 +37,7 @@
             return L.latLng(lnglat[1], lnglat[0]);
         },
 
-        bounds: L.bounds([482.06, 308914.15], [283594.48, 636381.86]), // Begrenzing in RD(?)
+        bounds: L.bounds([482.06, 304000.00], [283594.48, 636381.86]),
         
         proj4def: def
     };
