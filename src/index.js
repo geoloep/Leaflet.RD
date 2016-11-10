@@ -29,16 +29,17 @@
 
     L.Projection.RD = {
         project: function(latlng) {
-            var point = proj4RD.forward([latlng.lng, latlng.lat])
+            var point = proj4RD.forward([latlng.lng, latlng.lat]);
             return new L.Point(point[0], point[1]);
         },
         unproject: function(point) {
-            var latlng = proj4RD.inverse([point.x, point.y])
-            return L.latLng(latlng[1], latlng[0]);
+            var lnglat = proj4RD.inverse([point.x, point.y]);
+            return L.latLng(lnglat[1], lnglat[0]);
         },
 
-        bounds: L.bounds([482.06, 308914.15], [275902.39, 636381.86]) // Begrenzing in RD(?)
-
+        bounds: L.bounds([482.06, 308914.15], [283594.48, 636381.86]), // Begrenzing in RD(?)
+        
+        proj4def: def
     };
 
     L.CRS.RD = L.extend({}, L.CRS.Simple, {
