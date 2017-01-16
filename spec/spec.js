@@ -37,13 +37,26 @@ describe('L.CRS.RD', function() {
         expect(rd).toBeDefined();
     });
 
-    it('provides 16 scale and zoom levels', function() {
+    it('provides 16 predifined scale and zoom levels', function() {
         for (var i = 0; i <= 16; i++) {
             var scale = rd.scale(i)
             expect(scale).toBeDefined();
             expect(rd.zoom(scale)).toBeDefined();
         };
     });
+
+    it('provides scales for fractional zoom levels', function() {
+        for (var i = 0.5; i <= 15; i += 1) {
+            expect(rd.scale(i)).toBeCloseTo(1 / (3440.640 * Math.pow(0.5, i)));
+        }
+    });
+
+    it('provides zoom for scale levels', function() {
+        for (var i = 0; i <= 16; i++) {
+            let scale = rd.scale(i);
+            expect(rd.zoom(scale)).toBeCloseTo(Math.log((1/scale) / 3440.640) / (Math.log(0.5)));
+        };
+    })
 
     it('transforms rd coordinates', function() {
         expect(rd.transformation).toBeDefined();

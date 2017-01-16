@@ -1,10 +1,10 @@
 {
   "name": "leaflet-rd",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Adds support for the Amersfoort / RD New coordinate system",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"open specSpec/Runner.html to perform tests\" && exit 0"
+    "test": "echo \"open spec/SpecRunner.html to perform tests\" && exit 0"
   },
   "repository": {
     "type": "git",

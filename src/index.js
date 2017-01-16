@@ -19,12 +19,11 @@
     var proj4RD = proj4('WGS84', def);
 
     var maxZoom = 16; // Alleen de schalen t/m 14 zijn officieel vastgesteld
-    var scale = 3440.640;
+    var zeroScale = 3440.640;
     var scales = []
 
     for (var i = 0; i <= maxZoom; i++) {
-        scales.push(1 / scale);
-        scale /= 2;
+        scales.push(1/ (zeroScale * Math.pow(0.5, i)));
     };
 
     L.Projection.RD = {
@@ -37,7 +36,7 @@
             return L.latLng(lnglat[1], lnglat[0]);
         },
 
-        bounds: L.bounds([482.06, 304000.00], [283594.48, 636381.86]),
+        bounds: L.bounds([-285401.920, 903401.920], [595401.920, 22598.080]),
         
         proj4def: def
     };
@@ -49,11 +48,15 @@
         transformation: new L.Transformation(1, 285401.920, -1, 903401.920),
 
         scale: function(zoom) {
-            return scales[zoom];
+            if (scales[zoom]) {
+                return scales[zoom]
+            } else {
+                return 1 / (zeroScale * Math.pow(0.5, zoom));
+            }
         },
 
         zoom: function(scale) {
-            return scales.indexOf(scale);
+            return Math.log((1/scale) / zeroScale) / (Math.log(0.5));
         },
     });
 
