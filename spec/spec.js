@@ -1,3 +1,5 @@
+'use strict';
+
 describe('L.Projection.RD', function() {
     var rd = L.Projection.RD;
 
@@ -53,7 +55,7 @@ describe('L.CRS.RD', function() {
 
     it('provides zoom for scale levels', function() {
         for (var i = 0; i <= 16; i++) {
-            let scale = rd.scale(i);
+            var scale = rd.scale(i);
             expect(rd.zoom(scale)).toBeCloseTo(Math.log((1/scale) / 3440.640) / (Math.log(0.5)));
         };
     })

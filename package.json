@@ -4,7 +4,7 @@
   "description": "Adds support for the Amersfoort / RD New coordinate system",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"open spec/SpecRunner.html to perform tests\" && exit 0"
+    "test": "./node_modules/karma/bin/karma start karma.conf.js"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,11 @@
     "leaflet": "~1.0.0"
   },
   "devDependencies": {
-    "@types/leaflet": "*"
+    "@types/leaflet": "*",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.5.0",
+    "karma-phantomjs-launcher": "^1.0.2",
+    "karma-jasmine": "^1.1.0"
   },
   "typings": "src/index.d.ts",
   "keywords": [
