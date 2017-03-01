@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/geoloep/Leaflet.RD.svg?branch=master)](https://travis-ci.org/geoloep/Leaflet.RD)
+
 # Leaflet.RD
 Deze plugin voegt ondersteuning voor het Rijksdriehoeksstelsel toe aan Leaflet. Gebruik het meegelverde coördinatensysteem bij het aanmaken van een nieuwe kaart. Leaflet is dan meteen geschikt voor het tonen van bijvoorbeeld kaartlagen uit [PDOK](https://www.pdok.nl/).
 
