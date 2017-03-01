@@ -22,7 +22,7 @@ var map = L.map("map", {
 });
 ```
 
-The pluging exports L.CRS.RD, in node the following is also possible:
+The plugin exports L.CRS.RD, in node the following is also possible:
 ```javascript
 var rd = require("leaflet-rd");
 
