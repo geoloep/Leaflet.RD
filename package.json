@@ -1,8 +1,8 @@
 {
   "name": "leaflet-rd",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Adds support for the Amersfoort / RD New coordinate system",
-  "main": "src/index.js",
+  "main": "src/leaflet.rd.js",
   "scripts": {
     "test": "./node_modules/karma/bin/karma start karma.conf.js"
   },
@@ -29,7 +29,7 @@
     "karma-phantomjs-launcher": "^1.0.2",
     "karma-jasmine": "^1.1.0"
   },
-  "typings": "src/index.d.ts",
+  "typings": "src/leaflet.rd.d.ts",
   "keywords": [
     "leaflet",
     "coordinate",
