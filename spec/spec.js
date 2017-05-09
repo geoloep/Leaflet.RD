@@ -21,12 +21,26 @@ describe('L.Projection.RD', function() {
 
     it('projects to rd', function() {
         var point = rd.project(L.latLng(52.225, 5.21));
-        expect(point.x).toBeCloseTo(142735.75);
-        expect(point.y).toBeCloseTo(470715.91);
+        expect(point.x).toBeCloseTo(142892.19);
+        expect(point.y).toBeCloseTo(470783.87);
     });
 
     it('unprojects to wgs84', function() {
         var latLng = rd.unproject(L.point(142735.75, 470715.91));
+        expect(latLng.lng).toBeCloseTo(5.21);
+        expect(latLng.lat).toBeCloseTo(52.225);
+    });
+
+    it('it projects to wgs84 and back again', function() {
+        var latLng = rd.unproject(L.point(142735.75, 470715.91));
+        var point = rd.project(latLng)
+        expect(point.x).toBeCloseTo(142735.75);
+        expect(point.y).toBeCloseTo(470715.91);
+    });
+
+    it('it projects to rd and back again', function() {
+        var point = rd.project(L.latLng(52.225, 5.21));
+        var latLng = rd.unproject(point)
         expect(latLng.lng).toBeCloseTo(5.21);
         expect(latLng.lat).toBeCloseTo(52.225);
     });
