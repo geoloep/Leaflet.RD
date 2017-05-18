@@ -1,6 +1,6 @@
 {
   "name": "leaflet-rd",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Adds support for the Amersfoort / RD New coordinate system",
   "main": "src/leaflet.rd.js",
   "scripts": {

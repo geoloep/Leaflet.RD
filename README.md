@@ -34,4 +34,4 @@ var map = L.map("map", {
 ```
 
 ### Projecting Markers and Vector Layers
-Markers and Vector Layers still expect latlng input. Project points using L.projection.RD.unproject(point) or map.options.crs.projection.unproject. You can convert GeoJson-data using [reproject](https://github.com/perliedman/reproject), as an added convenience an proj4 defenition string is located at L.projection.RD.pro4def.
+Markers and Vector Layers still expect latlng input. Project points using L.projection.RD.unproject(point) or map.options.crs.projection.unproject. You can convert GeoJson-data using [reproject](https://github.com/perliedman/reproject), as an added convenience an proj4 defenition string is located at L.projection.RD.proj4def.
