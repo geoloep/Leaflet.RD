@@ -1,6 +1,6 @@
 {
   "name": "leaflet-rd",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Adds support for the Amersfoort / RD New coordinate system",
   "main": "src/leaflet.rd.js",
   "scripts": {
@@ -17,10 +17,10 @@
   },
   "homepage": "https://github.com/geoloep/Leaflet.RD#readme",
   "dependencies": {
-    "proj4": "~2.3.17"
+    "proj4": "~2.4.4"
   },
   "peerDependencies": {
-    "leaflet": "~1.0.3"
+    "leaflet": "^1.2.0"
   },
   "devDependencies": {
     "@types/leaflet": "*",

@@ -15,8 +15,8 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'https://unpkg.com/leaflet@1.0.3/dist/leaflet.js',
-      'https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.15/proj4.js',
+      'https://unpkg.com/leaflet@1.2.0/dist/leaflet.js',
+      'https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.4.4/proj4.js',
       'src/*.js',
       'spec/spec.js'
     ],
