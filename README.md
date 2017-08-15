@@ -1,10 +1,10 @@
-[![Build Status](https://travis-ci.org/geoloep/Leaflet.RD.svg?branch=master)](https://travis-ci.org/geoloep/Leaflet.RD)
+[![Build Status](https://travis-ci.org/geoloep/Leaflet.RD.svg?branch=master)](https://travis-ci.org/geoloep/Leaflet.RD)  [![npm version](https://badge.fury.io/js/leaflet-rd.svg)](https://badge.fury.io/js/leaflet-rd)
 
 # Leaflet.RD
 Deze plugin voegt ondersteuning voor het Rijksdriehoeksstelsel toe aan Leaflet. Gebruik het meegelverde coördinatensysteem bij het aanmaken van een nieuwe kaart. Leaflet is dan meteen geschikt voor het tonen van bijvoorbeeld kaartlagen uit [PDOK](https://www.pdok.nl/).
 
 This plugin adds support for the Amersfoort / RD New coordinate system. 
-*Created for leaflet 1.0 and up.* 
+*Created for leaflet 1.0 and up. Leaflet 1.1 not supported, use 1.2 in stead.* 
 
 ## Usage
 

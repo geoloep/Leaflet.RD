@@ -6,7 +6,7 @@
 
     // define a Common JS module that relies on 'leaflet'
     } else if (typeof exports === 'object' && !(window.test)) {
-        module.exports = factory(require('leaflet'), require('proj4'));
+        module.exports = factory(require('leaflet'), require('proj4').default);
     } else {
 
     // attach your plugin to the global 'L' variable
