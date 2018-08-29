@@ -4,12 +4,12 @@
     if (typeof define === 'function' && define.amd) {
         define(['leaflet', 'proj4'], factory);
 
-    // define a Common JS module that relies on 'leaflet'
+        // define a Common JS module that relies on 'leaflet'
     } else if (typeof exports === 'object' && !(window.test)) {
         module.exports = factory(require('leaflet'), require('proj4').default);
     } else {
 
-    // attach your plugin to the global 'L' variable
+        // attach your plugin to the global 'L' variable
         if (typeof L !== 'undefined' && typeof proj4 !== 'undefined') {
             factory(L, proj4);
         }
@@ -23,21 +23,21 @@
     var scales = []
 
     for (var i = 0; i <= maxZoom; i++) {
-        scales.push(1/ (zeroScale * Math.pow(0.5, i)));
+        scales.push(1 / (zeroScale * Math.pow(0.5, i)));
     };
 
     L.Projection.RD = {
-        project: function(latlng) {
+        project: function (latlng) {
             var point = proj4RD.forward([latlng.lng, latlng.lat]);
             return new L.Point(point[0], point[1]);
         },
-        unproject: function(point) {
+        unproject: function (point) {
             var lnglat = proj4RD.inverse([point.x, point.y]);
             return L.latLng(lnglat[1], lnglat[0]);
         },
 
         bounds: L.bounds([-285401.920, 903401.920], [595401.920, 22598.080]),
-        
+
         proj4def: def
     };
 
@@ -47,7 +47,7 @@
         projection: L.Projection.RD,
         transformation: new L.Transformation(1, 285401.920, -1, 903401.920),
 
-        scale: function(zoom) {
+        scale: function (zoom) {
             if (scales[zoom]) {
                 return scales[zoom]
             } else {
@@ -55,8 +55,8 @@
             }
         },
 
-        zoom: function(scale) {
-            return Math.log((1/scale) / zeroScale) / (Math.log(0.5));
+        zoom: function (scale) {
+            return Math.log((1 / scale) / zeroScale) / (Math.log(0.5));
         },
     });
 
