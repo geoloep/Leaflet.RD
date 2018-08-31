@@ -23,13 +23,13 @@
     "leaflet": "^1.3.0"
   },
   "devDependencies": {
-    "@types/leaflet": "*",
+    "@types/leaflet": "~1.2.10",
     "jasmine-core": "^3.2.0",
     "karma": "^3.0.0",
     "karma-phantomjs-launcher": "^1.0.2",
     "karma-jasmine": "^1.1.0"
   },
-  "typings": "src/leaflet.rd.d.ts",
+  "typings": "types/index.d.ts",
   "keywords": [
     "leaflet",
     "coordinate",
