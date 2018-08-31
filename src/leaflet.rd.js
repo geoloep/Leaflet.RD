@@ -6,7 +6,7 @@
 
         // define a Common JS module that relies on 'leaflet'
     } else if (typeof exports === 'object' && !(window.test)) {
-        module.exports = factory(require('leaflet'), require('proj4').default);
+        module.exports = factory(require('leaflet'), require('proj4'));
     } else {
 
         // attach your plugin to the global 'L' variable
@@ -15,6 +15,10 @@
         }
     }
 }(function (L, proj4) {
+    if (proj4.hasOwnProperty('default')) {
+        proj4 = proj4.default;
+    }
+
     var def = '+proj=sterea +lat_0=52.15616055555555 +lon_0=5.38763888888889 +k=0.9999079 +x_0=155000 +y_0=463000 +ellps=bessel +towgs84=565.4171,50.3319,465.5524,-0.398957,0.343988,-1.87740,4.0725 +units=m +no_defs';
     var proj4RD = proj4('WGS84', def);
 
