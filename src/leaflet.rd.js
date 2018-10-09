@@ -64,5 +64,7 @@
         },
     });
 
-    return L.CRS.RD;
+    return {
+        default: L.CRS.RD
+    };
 }, window));

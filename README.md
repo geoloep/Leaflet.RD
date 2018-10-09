@@ -26,7 +26,7 @@ var map = L.map("map", {
 
 The plugin exports L.CRS.RD, in node the following is also possible:
 ```javascript
-var rd = require("leaflet-rd");
+import rd from 'leaflet-rd';
 
 var map = L.map("map", {
     crs: rd,
